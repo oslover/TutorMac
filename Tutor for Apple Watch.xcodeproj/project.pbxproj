@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		256AC3DA0F4B6AC300CF3369 /* TutorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* TutorAppDelegate.m */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		90017FFE12B0312400D268A3 /* fs_enter_fullscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D7710F1812A7B87700BE70B9 /* fs_enter_fullscreen.png */; };
+		9031DB8C1629C47700A67442 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9031DB8B1629C47700A67442 /* icon.icns */; };
+		904957F8202518A9005A1226 /* 110-around-watch-app.mov in Resources */ = {isa = PBXBuildFile; fileRef = 904957E2202518A7005A1226 /* 110-around-watch-app.mov */; };
+		904957F9202518A9005A1226 /* 50-which.mov in Resources */ = {isa = PBXBuildFile; fileRef = 904957E3202518A8005A1226 /* 50-which.mov */; };
+		904957FB202518A9005A1226 /* 100-around-watch.mov in Resources */ = {isa = PBXBuildFile; fileRef = 904957E5202518A8005A1226 /* 100-around-watch.mov */; };
+		BFCE33D318E403BD001F194C /* shoppingcart.png in Resources */ = {isa = PBXBuildFile; fileRef = BFCE33D218E403BD001F194C /* shoppingcart.png */; };
+		BFCE33D518E4055F001F194C /* newsletter.png in Resources */ = {isa = PBXBuildFile; fileRef = BFCE33D418E4055F001F194C /* newsletter.png */; };
+		BFCE33D718E40B5D001F194C /* review.png in Resources */ = {isa = PBXBuildFile; fileRef = BFCE33D618E40B5D001F194C /* review.png */; };
+		BFCE33DB18E41517001F194C /* ShoppingCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCE33DA18E41517001F194C /* ShoppingCartViewController.m */; };
+		BFCE33DF18E417E3001F194C /* NewsletterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCE33DD18E417E3001F194C /* NewsletterViewController.m */; };
+		BFCE33EF18E432AE001F194C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCE33EE18E432AE001F194C /* Security.framework */; };
+		BFCE33F418E44243001F194C /* AppListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCE33F318E44243001F194C /* AppListModel.m */; };
+		BFCE33F718E44C35001F194C /* AppListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCE33F618E44C35001F194C /* AppListItem.m */; };
+		BFCE340418E5B616001F194C /* ReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCE340318E5B616001F194C /* ReviewViewController.m */; };
+		BFCE340818E5BA66001F194C /* RSVerticallyCenteredTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCE340718E5BA66001F194C /* RSVerticallyCenteredTextFieldCell.m */; };
+		CA00F76C1B33569C0056B334 /* ChimpKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CA00F76B1B33569C0056B334 /* ChimpKit.m */; };
+		D70A96411622E12700F65548 /* NSStringToAttributedStringTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = D70A96401622E12700F65548 /* NSStringToAttributedStringTransformer.m */; };
+		D71CBB8012A5289D00346A27 /* MoviePlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D71CBB7F12A5289D00346A27 /* MoviePlayerModel.m */; };
+		D7710E9512A7B1EA00BE70B9 /* PanelButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7710E9412A7B1EA00BE70B9 /* PanelButtonCell.m */; };
+		D7710F0812A7B7B000BE70B9 /* fs_exit_fullscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D7710F0712A7B7B000BE70B9 /* fs_exit_fullscreen.png */; };
+		D7710F5A12A7D06A00BE70B9 /* TutorMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7710F5912A7D06A00BE70B9 /* TutorMainWindowController.m */; };
+		D7710FF912A7DAE000BE70B9 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7710FF812A7DAE000BE70B9 /* Carbon.framework */; };
+		D771101212A7DC0200BE70B9 /* MoviePlayerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D771101112A7DC0200BE70B9 /* MoviePlayerWindow.m */; };
+		D7A6BFA212A6C56000784E98 /* fs_pause.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A6BF9E12A6C56000784E98 /* fs_pause.png */; };
+		D7A6BFA412A6C56000784E98 /* fs_play.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A6BFA012A6C56000784E98 /* fs_play.png */; };
+		D7B4FA2D1858FFF200D66BE3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B4FA2C1858FFF200D66BE3 /* AVFoundation.framework */; };
+		D7B4FA30185906C400D66BE3 /* TutorMovieView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B4FA2F185906C400D66BE3 /* TutorMovieView.m */; };
+		D7B4FA3218590B4600D66BE3 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B4FA3118590B4600D66BE3 /* CoreMedia.framework */; };
+		D7B4FA3418590D1600D66BE3 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B4FA3318590D1600D66BE3 /* Quartz.framework */; };
+		D7B971A712A68AE000CA6CBC /* NSTimeIntervalToMMSSTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B971A612A68AE000CA6CBC /* NSTimeIntervalToMMSSTransformer.m */; };
+		D7D8406D12A5060E005AE9FE /* videos.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7D8406C12A5060E005AE9FE /* videos.plist */; };
+		D7D8407012A506F7005AE9FE /* VideoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D8406F12A506F7005AE9FE /* VideoItem.m */; };
+		D7D8407912A50888005AE9FE /* VideoList.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D8407812A50888005AE9FE /* VideoList.m */; };
+		D7F3622D12A644F500BE0F02 /* TutorNormalWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D7F3622C12A644F500BE0F02 /* TutorNormalWindow.m */; };
+		D7FDA7A712AA7178002800A0 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D7FDA7A612AA7178002800A0 /* Credits.rtf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D71CBB7912A5278D00346A27 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Videos;
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		256AC3D80F4B6AC300CF3369 /* TutorAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorAppDelegate.h; sourceTree = "<group>"; };
+		256AC3D90F4B6AC300CF3369 /* TutorAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorAppDelegate.m; sourceTree = "<group>"; };
+		256AC3F00F4B6AF500CF3369 /* NoteboomTutor_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteboomTutor_Prefix.pch; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		8D1107310486CEB800E47090 /* Tutor-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tutor-Info.plist"; sourceTree = "<group>"; };
+		9031DB8B1629C47700A67442 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
+		903E616312BB1FE70039109F /* Tutor for Apple Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tutor for Apple Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		904957E2202518A7005A1226 /* 110-around-watch-app.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "110-around-watch-app.mov"; path = "Video/110-around-watch-app.mov"; sourceTree = "<group>"; };
+		904957E3202518A8005A1226 /* 50-which.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "50-which.mov"; path = "Video/50-which.mov"; sourceTree = "<group>"; };
+		904957E5202518A8005A1226 /* 100-around-watch.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "100-around-watch.mov"; path = "Video/100-around-watch.mov"; sourceTree = "<group>"; };
+		90F2FACA1D30001800BBF04B /* Tutor for Apple Watch 2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Tutor for Apple Watch 2.entitlements"; sourceTree = "<group>"; };
+		BFCE33D218E403BD001F194C /* shoppingcart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shoppingcart.png; path = graphics/shoppingcart.png; sourceTree = "<group>"; };
+		BFCE33D418E4055F001F194C /* newsletter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = newsletter.png; path = graphics/newsletter.png; sourceTree = "<group>"; };
+		BFCE33D618E40B5D001F194C /* review.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = review.png; path = graphics/review.png; sourceTree = "<group>"; };
+		BFCE33D918E41517001F194C /* ShoppingCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCartViewController.h; sourceTree = "<group>"; };
+		BFCE33DA18E41517001F194C /* ShoppingCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCartViewController.m; sourceTree = "<group>"; };
+		BFCE33DC18E417E3001F194C /* NewsletterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsletterViewController.h; sourceTree = "<group>"; };
+		BFCE33DD18E417E3001F194C /* NewsletterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsletterViewController.m; sourceTree = "<group>"; };
+		BFCE33EE18E432AE001F194C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		BFCE33F218E44243001F194C /* AppListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppListModel.h; sourceTree = "<group>"; };
+		BFCE33F318E44243001F194C /* AppListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppListModel.m; sourceTree = "<group>"; };
+		BFCE33F518E44C35001F194C /* AppListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppListItem.h; sourceTree = "<group>"; };
+		BFCE33F618E44C35001F194C /* AppListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppListItem.m; sourceTree = "<group>"; };
+		BFCE340218E5B616001F194C /* ReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewViewController.h; sourceTree = "<group>"; };
+		BFCE340318E5B616001F194C /* ReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewViewController.m; sourceTree = "<group>"; };
+		BFCE340618E5BA66001F194C /* RSVerticallyCenteredTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSVerticallyCenteredTextFieldCell.h; sourceTree = "<group>"; };
+		BFCE340718E5BA66001F194C /* RSVerticallyCenteredTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSVerticallyCenteredTextFieldCell.m; sourceTree = "<group>"; };
+		CA00F76A1B33569C0056B334 /* ChimpKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChimpKit.h; path = ChimpKit3/ChimpKit3/ChimpKit.h; sourceTree = "<group>"; };
+		CA00F76B1B33569C0056B334 /* ChimpKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChimpKit.m; path = ChimpKit3/ChimpKit3/ChimpKit.m; sourceTree = "<group>"; };
+		D70A963F1622E12700F65548 /* NSStringToAttributedStringTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringToAttributedStringTransformer.h; sourceTree = "<group>"; };
+		D70A96401622E12700F65548 /* NSStringToAttributedStringTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringToAttributedStringTransformer.m; sourceTree = "<group>"; };
+		D71CBB7E12A5289D00346A27 /* MoviePlayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerModel.h; sourceTree = "<group>"; };
+		D71CBB7F12A5289D00346A27 /* MoviePlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayerModel.m; sourceTree = "<group>"; };
+		D72E49ED12AD9D9A005C6715 /* QTMovieView+NoResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QTMovieView+NoResponder.h"; sourceTree = "<group>"; };
+		D72E49EE12AD9D9A005C6715 /* QTMovieView+NoResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QTMovieView+NoResponder.m"; sourceTree = "<group>"; };
+		D7710E9312A7B1EA00BE70B9 /* PanelButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelButtonCell.h; sourceTree = "<group>"; };
+		D7710E9412A7B1EA00BE70B9 /* PanelButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelButtonCell.m; sourceTree = "<group>"; };
+		D7710F0712A7B7B000BE70B9 /* fs_exit_fullscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fs_exit_fullscreen.png; path = graphics/fs_exit_fullscreen.png; sourceTree = "<group>"; };
+		D7710F1812A7B87700BE70B9 /* fs_enter_fullscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fs_enter_fullscreen.png; path = graphics/fs_enter_fullscreen.png; sourceTree = "<group>"; };
+		D7710F5812A7D06A00BE70B9 /* TutorMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorMainWindowController.h; sourceTree = "<group>"; };
+		D7710F5912A7D06A00BE70B9 /* TutorMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorMainWindowController.m; sourceTree = "<group>"; };
+		D7710FF812A7DAE000BE70B9 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		D771101012A7DC0200BE70B9 /* MoviePlayerWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerWindow.h; sourceTree = "<group>"; };
+		D771101112A7DC0200BE70B9 /* MoviePlayerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayerWindow.m; sourceTree = "<group>"; };
+		D7A6BF9E12A6C56000784E98 /* fs_pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fs_pause.png; path = graphics/fs_pause.png; sourceTree = "<group>"; };
+		D7A6BFA012A6C56000784E98 /* fs_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fs_play.png; path = graphics/fs_play.png; sourceTree = "<group>"; };
+		D7B4FA2C1858FFF200D66BE3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D7B4FA2E185906C400D66BE3 /* TutorMovieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorMovieView.h; sourceTree = "<group>"; };
+		D7B4FA2F185906C400D66BE3 /* TutorMovieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorMovieView.m; sourceTree = "<group>"; };
+		D7B4FA3118590B4600D66BE3 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		D7B4FA3318590D1600D66BE3 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		D7B971A512A68AE000CA6CBC /* NSTimeIntervalToMMSSTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTimeIntervalToMMSSTransformer.h; sourceTree = "<group>"; };
+		D7B971A612A68AE000CA6CBC /* NSTimeIntervalToMMSSTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTimeIntervalToMMSSTransformer.m; sourceTree = "<group>"; };
+		D7D8406C12A5060E005AE9FE /* videos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = videos.plist; sourceTree = "<group>"; };
+		D7D8406E12A506F7005AE9FE /* VideoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoItem.h; sourceTree = "<group>"; };
+		D7D8406F12A506F7005AE9FE /* VideoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoItem.m; sourceTree = "<group>"; };
+		D7D8407712A50888005AE9FE /* VideoList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoList.h; sourceTree = "<group>"; };
+		D7D8407812A50888005AE9FE /* VideoList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoList.m; sourceTree = "<group>"; };
+		D7D840D912A513FF005AE9FE /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
+		D7F3622B12A644F500BE0F02 /* TutorNormalWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorNormalWindow.h; sourceTree = "<group>"; };
+		D7F3622C12A644F500BE0F02 /* TutorNormalWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorNormalWindow.m; sourceTree = "<group>"; };
+		D7FDA7A612AA7178002800A0 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFCE33EF18E432AE001F194C /* Security.framework in Frameworks */,
+				D7B4FA3418590D1600D66BE3 /* Quartz.framework in Frameworks */,
+				D7B4FA3218590B4600D66BE3 /* CoreMedia.framework in Frameworks */,
+				D7B4FA2D1858FFF200D66BE3 /* AVFoundation.framework in Frameworks */,
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				D7710FF912A7DAE000BE70B9 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BFCE340618E5BA66001F194C /* RSVerticallyCenteredTextFieldCell.h */,
+				BFCE340718E5BA66001F194C /* RSVerticallyCenteredTextFieldCell.m */,
+				256AC3D80F4B6AC300CF3369 /* TutorAppDelegate.h */,
+				256AC3D90F4B6AC300CF3369 /* TutorAppDelegate.m */,
+				D7D8406E12A506F7005AE9FE /* VideoItem.h */,
+				D7D8406F12A506F7005AE9FE /* VideoItem.m */,
+				D7D8407712A50888005AE9FE /* VideoList.h */,
+				D7D8407812A50888005AE9FE /* VideoList.m */,
+				D71CBB7E12A5289D00346A27 /* MoviePlayerModel.h */,
+				D71CBB7F12A5289D00346A27 /* MoviePlayerModel.m */,
+				D7F3622B12A644F500BE0F02 /* TutorNormalWindow.h */,
+				D7F3622C12A644F500BE0F02 /* TutorNormalWindow.m */,
+				D7B971A512A68AE000CA6CBC /* NSTimeIntervalToMMSSTransformer.h */,
+				D7B971A612A68AE000CA6CBC /* NSTimeIntervalToMMSSTransformer.m */,
+				D7710E9312A7B1EA00BE70B9 /* PanelButtonCell.h */,
+				D7710E9412A7B1EA00BE70B9 /* PanelButtonCell.m */,
+				D7710F5812A7D06A00BE70B9 /* TutorMainWindowController.h */,
+				D7710F5912A7D06A00BE70B9 /* TutorMainWindowController.m */,
+				D771101012A7DC0200BE70B9 /* MoviePlayerWindow.h */,
+				D771101112A7DC0200BE70B9 /* MoviePlayerWindow.m */,
+				D72E49ED12AD9D9A005C6715 /* QTMovieView+NoResponder.h */,
+				D72E49EE12AD9D9A005C6715 /* QTMovieView+NoResponder.m */,
+				D70A963F1622E12700F65548 /* NSStringToAttributedStringTransformer.h */,
+				D70A96401622E12700F65548 /* NSStringToAttributedStringTransformer.m */,
+				D7B4FA2E185906C400D66BE3 /* TutorMovieView.h */,
+				D7B4FA2F185906C400D66BE3 /* TutorMovieView.m */,
+				BFCE33F218E44243001F194C /* AppListModel.h */,
+				BFCE33F318E44243001F194C /* AppListModel.m */,
+				BFCE33F518E44C35001F194C /* AppListItem.h */,
+				BFCE33F618E44C35001F194C /* AppListItem.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				D7D840D912A513FF005AE9FE /* QTKit.framework */,
+				D7710FF812A7DAE000BE70B9 /* Carbon.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				903E616312BB1FE70039109F /* Tutor for Apple Watch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* NoteBoomTutor */ = {
+			isa = PBXGroup;
+			children = (
+				90F2FACA1D30001800BBF04B /* Tutor for Apple Watch 2.entitlements */,
+				D71CBAC912A5270F00346A27 /* Videos */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				BFCE33D818E414BC001F194C /* Popover View Controllers */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = NoteBoomTutor;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CA00F7691B33559D0056B334 /* MailChimp */,
+				256AC3F00F4B6AF500CF3369 /* NoteboomTutor_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BFCE33D618E40B5D001F194C /* review.png */,
+				BFCE33D418E4055F001F194C /* newsletter.png */,
+				BFCE33D218E403BD001F194C /* shoppingcart.png */,
+				9031DB8B1629C47700A67442 /* icon.icns */,
+				D7FDA7A612AA7178002800A0 /* Credits.rtf */,
+				D7710F1812A7B87700BE70B9 /* fs_enter_fullscreen.png */,
+				D7710F0712A7B7B000BE70B9 /* fs_exit_fullscreen.png */,
+				D7A6BF9E12A6C56000784E98 /* fs_pause.png */,
+				D7A6BFA012A6C56000784E98 /* fs_play.png */,
+				8D1107310486CEB800E47090 /* Tutor-Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				D7D8406C12A5060E005AE9FE /* videos.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFCE33EE18E432AE001F194C /* Security.framework */,
+				D7B4FA3318590D1600D66BE3 /* Quartz.framework */,
+				D7B4FA3118590B4600D66BE3 /* CoreMedia.framework */,
+				D7B4FA2C1858FFF200D66BE3 /* AVFoundation.framework */,
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFCE33D818E414BC001F194C /* Popover View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BFCE33D918E41517001F194C /* ShoppingCartViewController.h */,
+				BFCE33DA18E41517001F194C /* ShoppingCartViewController.m */,
+				BFCE33DC18E417E3001F194C /* NewsletterViewController.h */,
+				BFCE33DD18E417E3001F194C /* NewsletterViewController.m */,
+				BFCE340218E5B616001F194C /* ReviewViewController.h */,
+				BFCE340318E5B616001F194C /* ReviewViewController.m */,
+			);
+			name = "Popover View Controllers";
+			sourceTree = "<group>";
+		};
+		CA00F7691B33559D0056B334 /* MailChimp */ = {
+			isa = PBXGroup;
+			children = (
+				CA00F76A1B33569C0056B334 /* ChimpKit.h */,
+				CA00F76B1B33569C0056B334 /* ChimpKit.m */,
+			);
+			name = MailChimp;
+			sourceTree = "<group>";
+		};
+		D71CBAC912A5270F00346A27 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				904957E3202518A8005A1226 /* 50-which.mov */,
+				904957E5202518A8005A1226 /* 100-around-watch.mov */,
+				904957E2202518A7005A1226 /* 110-around-watch-app.mov */,
+			);
+			name = Videos;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* Tutor for Apple Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Tutor for Apple Watch" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				D71CBB7912A5278D00346A27 /* CopyFiles */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tutor for Apple Watch";
+			productInstallPath = "$(HOME)/Applications";
+			productName = NoteBoomTutor;
+			productReference = 903E616312BB1FE70039109F /* Tutor for Apple Watch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Noteboom;
+				TargetAttributes = {
+					8D1107260486CEB800E47090 = {
+						DevelopmentTeam = 8YG87LK34Y;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Tutor for Apple Watch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* NoteBoomTutor */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* Tutor for Apple Watch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFCE33D518E4055F001F194C /* newsletter.png in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				BFCE33D718E40B5D001F194C /* review.png in Resources */,
+				D7D8406D12A5060E005AE9FE /* videos.plist in Resources */,
+				D7A6BFA212A6C56000784E98 /* fs_pause.png in Resources */,
+				904957FB202518A9005A1226 /* 100-around-watch.mov in Resources */,
+				904957F8202518A9005A1226 /* 110-around-watch-app.mov in Resources */,
+				D7A6BFA412A6C56000784E98 /* fs_play.png in Resources */,
+				D7710F0812A7B7B000BE70B9 /* fs_exit_fullscreen.png in Resources */,
+				D7FDA7A712AA7178002800A0 /* Credits.rtf in Resources */,
+				BFCE33D318E403BD001F194C /* shoppingcart.png in Resources */,
+				90017FFE12B0312400D268A3 /* fs_enter_fullscreen.png in Resources */,
+				904957F9202518A9005A1226 /* 50-which.mov in Resources */,
+				9031DB8C1629C47700A67442 /* icon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				BFCE340418E5B616001F194C /* ReviewViewController.m in Sources */,
+				CA00F76C1B33569C0056B334 /* ChimpKit.m in Sources */,
+				BFCE33DB18E41517001F194C /* ShoppingCartViewController.m in Sources */,
+				BFCE340818E5BA66001F194C /* RSVerticallyCenteredTextFieldCell.m in Sources */,
+				D7B4FA30185906C400D66BE3 /* TutorMovieView.m in Sources */,
+				256AC3DA0F4B6AC300CF3369 /* TutorAppDelegate.m in Sources */,
+				BFCE33F718E44C35001F194C /* AppListItem.m in Sources */,
+				D7D8407012A506F7005AE9FE /* VideoItem.m in Sources */,
+				BFCE33DF18E417E3001F194C /* NewsletterViewController.m in Sources */,
+				D7D8407912A50888005AE9FE /* VideoList.m in Sources */,
+				D71CBB8012A5289D00346A27 /* MoviePlayerModel.m in Sources */,
+				D7F3622D12A644F500BE0F02 /* TutorNormalWindow.m in Sources */,
+				D7B971A712A68AE000CA6CBC /* NSTimeIntervalToMMSSTransformer.m in Sources */,
+				D7710E9512A7B1EA00BE70B9 /* PanelButtonCell.m in Sources */,
+				D7710F5A12A7D06A00BE70B9 /* TutorMainWindowController.m in Sources */,
+				BFCE33F418E44243001F194C /* AppListModel.m in Sources */,
+				D771101212A7DC0200BE70B9 /* MoviePlayerWindow.m in Sources */,
+				D70A96411622E12700F65548 /* NSStringToAttributedStringTransformer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = "Tutor for Apple Watch 2.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = NoteboomTutor_Prefix.pch;
+				INFOPLIST_FILE = "Tutor-Info.plist";
+				INSTALL_PATH = /Applications;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_BUNDLE_IDENTIFIER = com.noteboomproductions.applewatch2;
+				PRODUCT_NAME = "Tutor for Apple Watch";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/campaignmonitor/createsend\"";
+				VALID_ARCHS = "x86_64 i386";
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = "Tutor for Apple Watch 2.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = NoteboomTutor_Prefix.pch;
+				INFOPLIST_FILE = "Tutor-Info.plist";
+				INSTALL_PATH = /Applications;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_BUNDLE_IDENTIFIER = com.noteboomproductions.applewatch2;
+				PRODUCT_NAME = "Tutor for Apple Watch";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/campaignmonitor/createsend\"";
+				VALID_ARCHS = "x86_64 i386";
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Tutor for Apple Watch 2";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx;
+				VALID_ARCHS = "x86_64 i386";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "Tutor for Apple Watch 2";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx;
+				VALID_ARCHS = "x86_64 i386";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Tutor for Apple Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Tutor for Apple Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

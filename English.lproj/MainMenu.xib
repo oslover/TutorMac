@@ -1,0 +1,1142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="494" id="495"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <menu title="AMainMenu" systemMenu="main" id="29">
+            <items>
+                <menuItem title="Tutor for Apple Watch" id="56">
+                    <menu key="submenu" title="Tutor for Apple Watch" systemMenu="apple" id="57">
+                        <items>
+                            <menuItem title="About Tutor for Apple Watch" id="58">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="showAboutDialog:" target="494" id="820"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="236">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Preferences..." keyEquivalent="," id="865">
+                                <connections>
+                                    <action selector="makeKeyAndOrderFront:" target="854" id="867"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="866"/>
+                            <menuItem title="Hide Tutor for Apple Watch" keyEquivalent="h" id="134">
+                                <connections>
+                                    <action selector="hide:" target="-1" id="367"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="145">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-1" id="368"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="150">
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-1" id="370"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="149">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Quit Tutor for Apple Watch" keyEquivalent="q" id="136">
+                                <connections>
+                                    <action selector="terminate:" target="-3" id="449"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Videos" id="821">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Videos" id="822">
+                        <connections>
+                            <outlet property="delegate" destination="494" id="826"/>
+                        </connections>
+                    </menu>
+                </menuItem>
+                <menuItem title="View" id="295">
+                    <menu key="submenu" title="View" id="296">
+                        <items>
+                            <menuItem title="Enter Fullscreen" id="297">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="enterFullScreen:" target="494" id="875"/>
+                                    <binding destination="642" name="enabled" keyPath="isFullscreen" id="736">
+                                        <dictionary key="options">
+                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Exit Fullscreen" id="298">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="exitFullScreen:" target="494" id="876"/>
+                                    <binding destination="642" name="enabled" keyPath="isFullscreen" id="738"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Edit" id="906">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Edit" id="907">
+                        <items>
+                            <menuItem title="Undo" keyEquivalent="z" id="908">
+                                <connections>
+                                    <action selector="undo:" target="-1" id="974"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Redo" keyEquivalent="Z" id="909">
+                                <connections>
+                                    <action selector="redo:" target="-1" id="968"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="910"/>
+                            <menuItem title="Cut" keyEquivalent="x" id="911">
+                                <connections>
+                                    <action selector="cut:" target="-1" id="954"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Copy" keyEquivalent="c" id="912">
+                                <connections>
+                                    <action selector="copy:" target="-1" id="953"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Paste" keyEquivalent="v" id="913">
+                                <connections>
+                                    <action selector="paste:" target="-1" id="959"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Paste and Match Style" keyEquivalent="V" id="914">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="pasteAsPlainText:" target="-1" id="976"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Delete" id="915">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="delete:" target="-1" id="969"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Select All" keyEquivalent="a" id="916">
+                                <connections>
+                                    <action selector="selectAll:" target="-1" id="972"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="917"/>
+                            <menuItem title="Find" id="918">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Find" id="946">
+                                    <items>
+                                        <menuItem title="Find…" tag="1" keyEquivalent="f" id="947">
+                                            <connections>
+                                                <action selector="performFindPanelAction:" target="-1" id="979"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Find Next" tag="2" keyEquivalent="g" id="948">
+                                            <connections>
+                                                <action selector="performFindPanelAction:" target="-1" id="977"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Find Previous" tag="3" keyEquivalent="G" id="949">
+                                            <connections>
+                                                <action selector="performFindPanelAction:" target="-1" id="981"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Use Selection for Find" tag="7" keyEquivalent="e" id="950">
+                                            <connections>
+                                                <action selector="performFindPanelAction:" target="-1" id="978"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Jump to Selection" keyEquivalent="j" id="951">
+                                            <connections>
+                                                <action selector="centerSelectionInVisibleArea:" target="-1" id="980"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Spelling and Grammar" id="919">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Spelling" id="939">
+                                    <items>
+                                        <menuItem title="Show Spelling and Grammar" keyEquivalent=":" id="940">
+                                            <connections>
+                                                <action selector="showGuessPanel:" target="-1" id="967"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Check Document Now" keyEquivalent=";" id="941">
+                                            <connections>
+                                                <action selector="checkSpelling:" target="-1" id="957"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="942"/>
+                                        <menuItem title="Check Spelling While Typing" id="943">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleContinuousSpellChecking:" target="-1" id="958"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Check Grammar With Spelling" id="944">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleGrammarChecking:" target="-1" id="966"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Correct Spelling Automatically" id="945">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleAutomaticSpellingCorrection:" target="-1" id="955"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Substitutions" id="920">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Substitutions" id="930">
+                                    <items>
+                                        <menuItem title="Show Substitutions" id="931">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="orderFrontSubstitutionsPanel:" target="-1" id="962"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="932"/>
+                                        <menuItem title="Smart Copy/Paste" id="933">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleSmartInsertDelete:" target="-1" id="956"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Smart Quotes" id="934">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleAutomaticQuoteSubstitution:" target="-1" id="970"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Smart Dashes" id="935">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleAutomaticDashSubstitution:" target="-1" id="975"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Smart Links" id="936">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleAutomaticLinkDetection:" target="-1" id="963"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Data Detectors" id="937">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleAutomaticDataDetection:" target="-1" id="960"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Text Replacement" id="938">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleAutomaticTextReplacement:" target="-1" id="961"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Transformations" id="921">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Transformations" id="926">
+                                    <items>
+                                        <menuItem title="Make Upper Case" id="927">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="uppercaseWord:" target="-1" id="964"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Make Lower Case" id="928">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="lowercaseWord:" target="-1" id="965"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Capitalize" id="929">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="capitalizeWord:" target="-1" id="971"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Speech" id="922">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Speech" id="923">
+                                    <items>
+                                        <menuItem title="Start Speaking" id="924">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="startSpeaking:" target="-1" id="952"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Stop Speaking" id="925">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="stopSpeaking:" target="-1" id="973"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Playback" id="742">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Playback" id="743">
+                        <items>
+                            <menuItem title="Play" id="744">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="startPlayback:" target="494" id="747"/>
+                                    <binding destination="569" name="enabled" keyPath="isPlaying" id="751">
+                                        <dictionary key="options">
+                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Pause" id="745">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="stopPlayback:" target="494" id="748"/>
+                                    <binding destination="569" name="enabled" keyPath="isPlaying" id="754"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Help" id="1tz-Y0-Ia0">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Help" systemMenu="help" id="tiu-1T-qqt">
+                        <items>
+                            <menuItem title="More Tutorials" id="yC1-Wb-mT6">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="showHelp:" target="-1" id="5SU-sG-FrQ"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+        </menu>
+        <window title="Tutor for Apple Watch" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" frameAutosaveName="MainWindow" animationBehavior="default" id="779" userLabel="Normal Window" customClass="TutorNormalWindow">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="35" y="70" width="691" height="722"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <value key="minSize" type="size" width="800" height="480"/>
+            <view key="contentView" misplaced="YES" id="780" userLabel="View">
+                <rect key="frame" x="0.0" y="0.0" width="691" height="722"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <splitView dividerStyle="thin" vertical="YES" id="534">
+                        <rect key="frame" x="0.0" y="0.0" width="691" height="722"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <customView id="815">
+                                <rect key="frame" x="0.0" y="0.0" width="282" height="722"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <splitView dividerStyle="paneSplitter" id="883">
+                                        <rect key="frame" x="0.0" y="0.0" width="282" height="722"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <customView id="884">
+                                                <rect key="frame" x="0.0" y="0.0" width="282" height="423"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <subviews>
+                                                    <scrollView focusRingType="exterior" borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="537">
+                                                        <rect key="frame" x="0.0" y="0.0" width="282" height="423"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="pWi-GI-pEf">
+                                                            <rect key="frame" x="0.0" y="0.0" width="282" height="423"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <subviews>
+                                                                <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" selectionHighlightStyle="sourceList" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" id="540">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="282" height="423"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    <size key="intercellSpacing" width="3" height="2"/>
+                                                                    <color key="backgroundColor" red="0.93721998770000003" green="0.94908846010000003" blue="0.98469387760000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                                                    <tableColumns>
+                                                                        <tableColumn identifier="" editable="NO" width="279" minWidth="40" maxWidth="4000" id="542">
+                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                                                                <font key="font" metaFont="smallSystem"/>
+                                                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            </tableHeaderCell>
+                                                                            <textFieldCell key="dataCell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" alignment="left" title="Text Cell" id="545">
+                                                                                <font key="font" metaFont="smallSystem"/>
+                                                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                            </textFieldCell>
+                                                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                                            <connections>
+                                                                                <binding destination="546" name="value" keyPath="arrangedObjects.title" id="550"/>
+                                                                            </connections>
+                                                                        </tableColumn>
+                                                                    </tableColumns>
+                                                                    <connections>
+                                                                        <outlet property="delegate" destination="642" id="842"/>
+                                                                    </connections>
+                                                                </tableView>
+                                                            </subviews>
+                                                        </clipView>
+                                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="539">
+                                                            <rect key="frame" x="0.0" y="407" width="270" height="16"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </scroller>
+                                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="538">
+                                                            <rect key="frame" x="230" y="1" width="15" height="197"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </scroller>
+                                                    </scrollView>
+                                                </subviews>
+                                            </customView>
+                                            <customView id="885">
+                                                <rect key="frame" x="0.0" y="433" width="282" height="289"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <subviews>
+                                                    <box autoresizesSubviews="NO" boxType="custom" borderType="none" title="Box" titlePosition="noTitle" id="892">
+                                                        <rect key="frame" x="0.0" y="0.0" width="282" height="289"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <view key="contentView" id="aWP-tt-hkH">
+                                                            <rect key="frame" x="0.0" y="0.0" width="282" height="289"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <subviews>
+                                                                <button toolTip="Add Note" verticalHuggingPriority="750" id="890">
+                                                                    <rect key="frame" x="5" y="3" width="25" height="21"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="only" alignment="center" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="891">
+                                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                        <font key="font" metaFont="smallSystem"/>
+                                                                    </buttonCell>
+                                                                    <connections>
+                                                                        <action selector="addNoteButtonPressed:" target="-1" id="901"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="886">
+                                                                    <rect key="frame" x="0.0" y="26" width="285" height="265"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    <clipView key="contentView" id="otd-AZ-8Oz">
+                                                                        <rect key="frame" x="1" y="1" width="283" height="263"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                        <subviews>
+                                                                            <textView importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="887">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="283" height="263"/>
+                                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                <size key="minSize" width="283" height="263"/>
+                                                                                <size key="maxSize" width="1308" height="10000000"/>
+                                                                                <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                <connections>
+                                                                                    <binding destination="868" name="attributedString" keyPath="values.Notes" id="905">
+                                                                                        <dictionary key="options">
+                                                                                            <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                                                                            <bool key="NSValidatesImmediately" value="YES"/>
+                                                                                            <string key="NSValueTransformerName">NSStringToAttributedStringTransformer</string>
+                                                                                        </dictionary>
+                                                                                    </binding>
+                                                                                </connections>
+                                                                            </textView>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </clipView>
+                                                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="888">
+                                                                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                    </scroller>
+                                                                    <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="889">
+                                                                        <rect key="frame" x="268" y="1" width="16" height="263"/>
+                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                    </scroller>
+                                                                </scrollView>
+                                                                <button toolTip="Print notes" verticalHuggingPriority="750" id="982">
+                                                                    <rect key="frame" x="213" y="3" width="65" height="21"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                                    <buttonCell key="cell" type="smallSquare" title="Print..." bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="983">
+                                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                        <font key="font" metaFont="smallSystem"/>
+                                                                    </buttonCell>
+                                                                    <connections>
+                                                                        <action selector="printNotesButtonPressed:" target="-1" id="986"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button toolTip="Email notes" verticalHuggingPriority="750" id="984">
+                                                                    <rect key="frame" x="140" y="3" width="65" height="21"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                                    <buttonCell key="cell" type="smallSquare" title="Email..." bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="985">
+                                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                        <font key="font" metaFont="smallSystem"/>
+                                                                    </buttonCell>
+                                                                    <connections>
+                                                                        <action selector="emailNotesButtonPressed:" target="-1" id="987"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </view>
+                                                        <color key="fillColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </box>
+                                                </subviews>
+                                            </customView>
+                                        </subviews>
+                                        <holdingPriorities>
+                                            <real value="250"/>
+                                            <real value="250"/>
+                                        </holdingPriorities>
+                                        <connections>
+                                            <outlet property="delegate" destination="779" id="896"/>
+                                        </connections>
+                                    </splitView>
+                                </subviews>
+                            </customView>
+                            <customView id="536">
+                                <rect key="frame" x="283" y="0.0" width="408" height="722"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <customView focusRingType="none" misplaced="YES" id="674" userLabel="Movie view container">
+                                        <rect key="frame" x="0.0" y="0.0" width="408" height="722"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </customView>
+                                </subviews>
+                            </customView>
+                        </subviews>
+                        <holdingPriorities>
+                            <real value="250"/>
+                            <real value="250"/>
+                        </holdingPriorities>
+                        <connections>
+                            <outlet property="delegate" destination="779" id="817"/>
+                        </connections>
+                    </splitView>
+                </subviews>
+            </view>
+            <toolbar key="toolbar" implicitIdentifier="446F7AA2-A454-487A-A06B-F38A8DB1DBE6" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconAndLabel" sizeMode="regular" id="m7V-ZQ-2up">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="D0435C3B-7BCA-4E88-86B4-EF445CAB5CD4" label="Back/Forward" paletteLabel="Back/Forward" id="3nS-e3-Xt6">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="70" height="25"/>
+                        <size key="maxSize" width="70" height="25"/>
+                        <segmentedControl key="view" verticalHuggingPriority="750" id="Rs4-2r-xWg">
+                            <rect key="frame" x="5" y="14" width="70" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedSquare" trackingMode="momentary" id="g1O-BH-1mr">
+                                <font key="font" metaFont="system"/>
+                                <segments>
+                                    <segment toolTip="Previous video" image="NSGoLeftTemplate" width="32"/>
+                                    <segment toolTip="Next video" image="NSGoRightTemplate" width="32" tag="1"/>
+                                </segments>
+                            </segmentedCell>
+                        </segmentedControl>
+                        <connections>
+                            <action selector="prevNextToolbarButtonPressed:" target="-1" id="BnX-Pk-ZNc"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="A79-fp-TCh"/>
+                    <toolbarItem implicitItemIdentifier="6ACA1FFF-5B40-42DC-B868-D6DDCF0774EE" label="Tutorials" paletteLabel="Tutorials" id="7ZJ-kl-vby">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="54" height="25"/>
+                        <size key="maxSize" width="56" height="25"/>
+                        <segmentedControl key="view" verticalHuggingPriority="750" id="nag-lj-u3i">
+                            <rect key="frame" x="0.0" y="14" width="56" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedSquare" trackingMode="momentary" id="d4c-vI-dHa">
+                                <font key="font" metaFont="system"/>
+                                <segments>
+                                    <segment image="shoppingcart" imageScaling="none" width="54"/>
+                                </segments>
+                            </segmentedCell>
+                            <connections>
+                                <action selector="shoppingCartButtonPressed:" target="-1" id="7dK-sG-XBn"/>
+                            </connections>
+                        </segmentedControl>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="A06AD5AC-7B35-4D0F-ABB2-216174DD5D5E" label="Newsletter" paletteLabel="Newsletter" id="X1q-72-lzB">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="54" height="25"/>
+                        <size key="maxSize" width="56" height="25"/>
+                        <segmentedControl key="view" verticalHuggingPriority="750" id="4I8-UV-eEL">
+                            <rect key="frame" x="4" y="14" width="56" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedSquare" trackingMode="momentary" id="fCO-DR-6Au">
+                                <font key="font" metaFont="system"/>
+                                <segments>
+                                    <segment toolTip="Subscribe to our newsletter" image="newsletter" imageScaling="none" width="54"/>
+                                </segments>
+                            </segmentedCell>
+                            <connections>
+                                <action selector="newsletterButtonPressed:" target="-1" id="rvR-TN-dQ1"/>
+                            </connections>
+                        </segmentedControl>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="33542FB8-81D1-40E2-A2F8-FA7D14A62AA4" label="Like the Tutorial?" paletteLabel="Like the Tutorial?" id="J1i-4Z-lXB">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="54" height="25"/>
+                        <size key="maxSize" width="56" height="25"/>
+                        <segmentedControl key="view" verticalHuggingPriority="750" id="HHV-kP-aOD">
+                            <rect key="frame" x="21" y="14" width="56" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedSquare" trackingMode="momentary" id="wsm-lH-IVl">
+                                <font key="font" metaFont="system"/>
+                                <segments>
+                                    <segment toolTip="Write a review" image="review" imageScaling="none" width="54"/>
+                                </segments>
+                            </segmentedCell>
+                            <connections>
+                                <action selector="reviewButtonPressed:" target="-1" id="MrJ-C4-4Zl"/>
+                            </connections>
+                        </segmentedControl>
+                    </toolbarItem>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="3nS-e3-Xt6"/>
+                    <toolbarItem reference="A79-fp-TCh"/>
+                    <toolbarItem reference="J1i-4Z-lXB"/>
+                    <toolbarItem reference="X1q-72-lzB"/>
+                    <toolbarItem reference="7ZJ-kl-vby"/>
+                </defaultToolbarItems>
+            </toolbar>
+            <connections>
+                <outlet property="bottomSplitSubview" destination="885" id="897"/>
+                <outlet property="delegate" destination="494" id="803"/>
+                <outlet property="horizontalSplitView" destination="534" id="802"/>
+                <outlet property="leftSplitSubview" destination="815" id="818"/>
+                <outlet property="movieView" destination="9xG-k5-DsL" id="NHq-gA-amS"/>
+                <outlet property="movieViewContainer" destination="674" id="797"/>
+                <outlet property="notesField" destination="887" id="902"/>
+                <outlet property="popupView" destination="580" id="798"/>
+                <outlet property="rightSplitSubview" destination="536" id="807"/>
+                <outlet property="topSplitSubview" destination="884" id="898"/>
+                <outlet property="verticalSplitView" destination="883" id="895"/>
+            </connections>
+            <point key="canvasLocation" x="16.5" y="483"/>
+        </window>
+        <customObject id="494" customClass="TutorAppDelegate">
+            <connections>
+                <outlet property="appListArrayController" destination="q0r-56-oHH" id="ih3-3b-mbv"/>
+                <outlet property="appListModel" destination="cPG-yM-Vww" id="lW1-k8-9SY"/>
+                <outlet property="mainWindowController" destination="642" id="733"/>
+                <outlet property="moviePlayer" destination="569" id="572"/>
+                <outlet property="newsletterPopover" destination="vVF-OZ-nyS" id="hqq-cd-QVU"/>
+                <outlet property="newsletterToolbarButton" destination="4I8-UV-eEL" id="Oii-Uf-5hV"/>
+                <outlet property="preferencesWindow" destination="854" id="882"/>
+                <outlet property="prevNextToolbarSegmentedControl" destination="Rs4-2r-xWg" id="cdh-gI-RSu"/>
+                <outlet property="reviewPopover" destination="aih-ok-Hbk" id="4od-Nx-zIl"/>
+                <outlet property="reviewToolbarButton" destination="HHV-kP-aOD" id="iUq-mO-Ru2"/>
+                <outlet property="shoppingCartPopover" destination="tvw-le-Q4c" id="ahE-d0-vYO"/>
+                <outlet property="videoList" destination="533" id="853"/>
+                <outlet property="videoListArrayController" destination="546" id="573"/>
+                <outlet property="videosSubmenu" destination="822" id="827"/>
+            </connections>
+        </customObject>
+        <customObject id="420" customClass="NSFontManager"/>
+        <customObject id="533" customClass="VideoList"/>
+        <customView id="znu-MH-g4x" userLabel="Review View">
+            <rect key="frame" x="0.0" y="0.0" width="367" height="296"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button verticalHuggingPriority="750" id="vLr-QB-j8P">
+                    <rect key="frame" x="122" y="14" width="123" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <buttonCell key="cell" type="push" title="Rate Tutorial" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="v1u-wB-Cet">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="showRate:" target="-1" id="LMm-AO-o4d"/>
+                    </connections>
+                </button>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="m1g-Rd-A8h">
+                    <rect key="frame" x="122" y="154" width="122" height="122"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSApplicationIcon" id="E1D-CL-YnH"/>
+                </imageView>
+                <button id="8xe-ym-Bah">
+                    <rect key="frame" x="245" y="20" width="104" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="Don't ask again" bezelStyle="regularSquare" imagePosition="left" controlSize="small" state="on" inset="2" id="BNP-Ff-R9Y">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <binding destination="-3" name="hidden" keyPath="delegate.isReviewDontAskHidden" id="Qdy-sX-1XQ"/>
+                        <binding destination="868" name="value" keyPath="values.IsUserAgreedToReviewTheApp" id="iOl-wc-jkj"/>
+                    </connections>
+                </button>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="XLB-tt-TMk">
+                    <rect key="frame" x="31" y="60" width="318" height="68"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="justified" id="Wrv-b8-ZB2">
+                        <font key="font" metaFont="system"/>
+                        <string key="title">Like the tutorial? Click the Rate Tutorial button below to open the App Store. From there you can review and/or rate the tutorial. It really does help and we'd appreciate it. Thanks!</string>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+        </customView>
+        <customObject id="cPG-yM-Vww" customClass="AppListModel"/>
+        <customObject id="569" customClass="MoviePlayerModel"/>
+        <arrayController id="546" userLabel="Videos Array Controller">
+            <declaredKeys>
+                <string>title</string>
+                <string>description</string>
+            </declaredKeys>
+            <connections>
+                <binding destination="533" name="contentArray" keyPath="videoList" id="548"/>
+            </connections>
+        </arrayController>
+        <customView id="580" userLabel="Normal Movie Panel View">
+            <rect key="frame" x="0.0" y="0.0" width="447" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button id="581" userLabel="Bevel Button">
+                    <rect key="frame" x="21" y="8" width="28" height="28"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="fs_play" imagePosition="only" alignment="center" alternateImage="fs_pause" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="582" customClass="PanelButtonCell">
+                        <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <binding destination="569" name="value" keyPath="isPlaying" id="630"/>
+                    </connections>
+                </button>
+                <button id="624">
+                    <rect key="frame" x="382" y="8" width="28" height="28"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="fs_enter_fullscreen" imagePosition="only" alignment="center" alternateImage="fs_exit_fullscreen" imageScaling="proportionallyUpOrDown" inset="2" id="625" customClass="PanelButtonCell">
+                        <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="toggleFullScreen:" target="494" id="877"/>
+                        <binding destination="642" name="value" keyPath="isFullscreen" id="647"/>
+                    </connections>
+                </button>
+                <slider verticalHuggingPriority="750" id="599">
+                    <rect key="frame" x="140" y="12" width="152" height="21"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="600"/>
+                    <connections>
+                        <binding destination="569" name="value" keyPath="currentTime" previousBinding="619" id="621"/>
+                        <binding destination="569" name="maxValue" keyPath="totalTime" id="619"/>
+                    </connections>
+                </slider>
+                <textField verticalHuggingPriority="750" id="602">
+                    <rect key="frame" x="67" y="15" width="60" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="MM:SS" id="603">
+                        <font key="font" metaFont="systemBold"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="569" name="value" keyPath="currentTime" id="622">
+                            <dictionary key="options">
+                                <string key="NSNullPlaceholder">--:--</string>
+                                <string key="NSValueTransformerName">NSTimeIntervalToMMSSTransformer</string>
+                            </dictionary>
+                        </binding>
+                    </connections>
+                </textField>
+                <textField verticalHuggingPriority="750" id="610">
+                    <rect key="frame" x="309" y="15" width="60" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="MM:SS" id="611">
+                        <font key="font" metaFont="systemBold"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="569" name="value" keyPath="totalTime" id="623">
+                            <dictionary key="options">
+                                <string key="NSNullPlaceholder">--:--</string>
+                                <string key="NSValueTransformerName">NSTimeIntervalToMMSSTransformer</string>
+                            </dictionary>
+                        </binding>
+                    </connections>
+                </textField>
+            </subviews>
+        </customView>
+        <customView id="711" userLabel="Fullscreen Movie Panel View">
+            <rect key="frame" x="0.0" y="0.0" width="447" height="59"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button id="712">
+                    <rect key="frame" x="21" y="10" width="36" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="fs_play" imagePosition="only" alignment="center" alternateImage="fs_pause" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="721" customClass="PanelButtonCell">
+                        <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <binding destination="569" name="value" keyPath="isPlaying" id="727"/>
+                    </connections>
+                </button>
+                <button id="713">
+                    <rect key="frame" x="382" y="9" width="36" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="fs_enter_fullscreen" imagePosition="only" alignment="center" alternateImage="fs_exit_fullscreen" imageScaling="proportionallyUpOrDown" inset="2" id="720" customClass="PanelButtonCell">
+                        <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <binding destination="642" name="value" keyPath="isFullscreen" id="724"/>
+                    </connections>
+                </button>
+                <slider verticalHuggingPriority="750" id="715">
+                    <rect key="frame" x="140" y="17" width="152" height="21"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="718"/>
+                    <connections>
+                        <binding destination="569" name="value" keyPath="currentTime" previousBinding="722" id="723"/>
+                        <binding destination="569" name="maxValue" keyPath="totalTime" id="722"/>
+                    </connections>
+                </slider>
+                <textField verticalHuggingPriority="750" id="716">
+                    <rect key="frame" x="67" y="21" width="60" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="MM:SS" id="717">
+                        <font key="font" metaFont="systemBold"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="569" name="value" keyPath="currentTime" id="725">
+                            <dictionary key="options">
+                                <string key="NSNullPlaceholder">--:--</string>
+                                <string key="NSValueTransformerName">NSTimeIntervalToMMSSTransformer</string>
+                            </dictionary>
+                        </binding>
+                    </connections>
+                </textField>
+                <textField verticalHuggingPriority="750" id="714">
+                    <rect key="frame" x="309" y="21" width="60" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="MM:SS" id="719">
+                        <font key="font" metaFont="systemBold"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="569" name="value" keyPath="totalTime" id="726">
+                            <dictionary key="options">
+                                <string key="NSNullPlaceholder">--:--</string>
+                                <string key="NSValueTransformerName">NSTimeIntervalToMMSSTransformer</string>
+                            </dictionary>
+                        </binding>
+                    </connections>
+                </textField>
+            </subviews>
+        </customView>
+        <arrayController id="q0r-56-oHH" userLabel="Apps Array Controller">
+            <connections>
+                <binding destination="cPG-yM-Vww" name="contentArray" keyPath="appList" id="AQc-QV-cVB"/>
+            </connections>
+        </arrayController>
+        <customObject id="642" customClass="TutorMainWindowController">
+            <connections>
+                <outlet property="fullscreenPopupView" destination="711" id="828"/>
+                <outlet property="movieView" destination="9xG-k5-DsL" id="Gjt-bC-TLp"/>
+                <outlet property="normalWindow" destination="779" id="799"/>
+                <outlet property="normalscreenPopupView" destination="580" id="851"/>
+                <outlet property="videoListTableView" destination="540" id="FBM-RG-QbG"/>
+            </connections>
+        </customObject>
+        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="854">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="701" y="458" width="344" height="80"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <view key="contentView" id="855">
+                <rect key="frame" x="0.0" y="0.0" width="344" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button id="856">
+                        <rect key="frame" x="18" y="44" width="308" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Show video list and notes in full screen mode" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="857">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <binding destination="868" name="value" keyPath="values.isShowVideoListInFullScreen" id="870"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <toolbar key="toolbar" implicitIdentifier="104ECB29-DC49-4D5E-B8C9-34818FEE3A79" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconAndLabel" sizeMode="regular" id="858">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="863"/>
+                    <toolbarItem implicitItemIdentifier="2014041D-B724-43C5-9175-F843BC2770D5" label="General" paletteLabel="General" tag="-1" image="NSPreferencesGeneral" autovalidates="NO" selectable="YES" id="864"/>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="864"/>
+                    <toolbarItem reference="863"/>
+                </defaultToolbarItems>
+            </toolbar>
+        </window>
+        <userDefaultsController representsSharedInstance="YES" id="868"/>
+        <customView id="9xG-k5-DsL" customClass="TutorMovieView">
+            <rect key="frame" x="0.0" y="0.0" width="163" height="96"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <connections>
+                <outlet property="moviePlayerModel" destination="569" id="f7X-tR-PfA"/>
+            </connections>
+        </customView>
+        <viewController id="Ktt-Me-3eE" userLabel="Shopping Cart View Controller" customClass="ShoppingCartViewController">
+            <connections>
+                <outlet property="tableView" destination="eX9-1L-I8V" id="IAs-Y0-sWi"/>
+                <outlet property="view" destination="MsU-JP-qJd" id="ckb-84-fng"/>
+            </connections>
+        </viewController>
+        <customView id="MsU-JP-qJd" userLabel="Shopping cart view">
+            <rect key="frame" x="0.0" y="0.0" width="818" height="285"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="64" horizontalPageScroll="10" verticalLineScroll="64" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="Ser-1w-sAq">
+                    <rect key="frame" x="9" y="8" width="800" height="268"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <clipView key="contentView" id="8SZ-Cp-rT5">
+                        <rect key="frame" x="1" y="1" width="798" height="266"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" selectionHighlightStyle="none" alternatingRowBackgroundColors="YES" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="44" id="eX9-1L-I8V">
+                                <rect key="frame" x="0.0" y="0.0" width="798" height="266"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <size key="intercellSpacing" width="20" height="20"/>
+                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <tableViewGridLines key="gridStyleMask" vertical="YES" dashed="YES"/>
+                                <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                <tableColumns>
+                                    <tableColumn identifier="" width="50" minWidth="40" maxWidth="1000" id="gZ6-wP-ggv">
+                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
+                                        </tableHeaderCell>
+                                        <imageCell key="dataCell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="FfO-rP-gRc"/>
+                                        <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                        <connections>
+                                            <binding destination="q0r-56-oHH" name="valueURL" keyPath="arrangedObjects.iconURL" id="Snr-Pl-jU6"/>
+                                        </connections>
+                                    </tableColumn>
+                                    <tableColumn identifier="" editable="NO" width="344" minWidth="40" maxWidth="1000" id="cwm-Lo-zk1">
+                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
+                                        </tableHeaderCell>
+                                        <textFieldCell key="dataCell" lineBreakMode="truncatingTail" alignment="left" title="Text Cell" id="5cC-Ao-2sp" customClass="RSVerticallyCenteredTextFieldCell">
+                                            <font key="font" metaFont="systemBold" size="18"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                        <connections>
+                                            <binding destination="q0r-56-oHH" name="value" keyPath="arrangedObjects.title" id="mja-SH-VI6"/>
+                                        </connections>
+                                    </tableColumn>
+                                    <tableColumn identifier="" width="85.38671875" minWidth="10" maxWidth="3.4028234663852886e+38" id="bLy-jd-Fwj">
+                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                        </tableHeaderCell>
+                                        <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="center" title="Text Cell" id="LJj-Q2-RYe" customClass="RSVerticallyCenteredTextFieldCell">
+                                            <font key="font" metaFont="cellTitle"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                        <connections>
+                                            <binding destination="q0r-56-oHH" name="value" keyPath="arrangedObjects.kind" id="fhn-md-fEr"/>
+                                        </connections>
+                                    </tableColumn>
+                                    <tableColumn identifier="" width="79" minWidth="10" maxWidth="3.4028234663852886e+38" id="AIb-XS-MBc">
+                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                        </tableHeaderCell>
+                                        <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="center" title="Text Cell" id="E7o-RL-h27" customClass="RSVerticallyCenteredTextFieldCell">
+                                            <dateFormatter key="formatter" dateStyle="short" id="37C-Xt-Qgu"/>
+                                            <font key="font" metaFont="cellTitle"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                        <connections>
+                                            <binding destination="q0r-56-oHH" name="value" keyPath="arrangedObjects.releaseDate" id="8ZM-hk-cf7"/>
+                                        </connections>
+                                    </tableColumn>
+                                    <tableColumn identifier="" width="139.68359375" minWidth="10" maxWidth="3.4028234663852886e+38" id="8jH-e8-zSJ">
+                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                        </tableHeaderCell>
+                                        <buttonCell key="dataCell" type="roundRect" title="View In AppStore" bezelStyle="roundedRect" imagePosition="left" alignment="center" borderStyle="border" inset="2" id="BN8-CZ-zBu">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="cellTitle"/>
+                                            <connections>
+                                                <action selector="viewInAppStoreButtonPressed:" target="Ktt-Me-3eE" id="hcJ-MY-6gI"/>
+                                            </connections>
+                                        </buttonCell>
+                                        <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                    </tableColumn>
+                                </tableColumns>
+                                <connections>
+                                    <outlet property="delegate" destination="Ktt-Me-3eE" id="9O2-Vw-L2c"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="oPM-4W-lRM">
+                        <rect key="frame" x="1" y="251" width="798" height="16"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="J1b-rX-LPs">
+                        <rect key="frame" x="224" y="17" width="15" height="102"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+        </customView>
+        <popover behavior="semitransient" id="tvw-le-Q4c" userLabel="Shopping Cart Popover">
+            <connections>
+                <outlet property="contentViewController" destination="Ktt-Me-3eE" id="lVo-3j-CHz"/>
+            </connections>
+        </popover>
+        <viewController id="pjs-H2-fGN" userLabel="Newsletter View Controller" customClass="NewsletterViewController">
+            <connections>
+                <outlet property="emailTextField" destination="gQk-Yq-xg7" id="pWk-cB-fZN"/>
+                <outlet property="view" destination="fwX-sT-dci" id="Ju8-Ug-ecY"/>
+            </connections>
+        </viewController>
+        <popover behavior="semitransient" id="vVF-OZ-nyS" userLabel="Newsletter Popover">
+            <connections>
+                <outlet property="contentViewController" destination="pjs-H2-fGN" id="S38-l3-xbI"/>
+            </connections>
+        </popover>
+        <customView id="fwX-sT-dci" userLabel="Newsletter View">
+            <rect key="frame" x="0.0" y="0.0" width="392" height="213"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="c37-ZG-Jpi">
+                    <rect key="frame" x="189" y="97" width="16" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <connections>
+                        <binding destination="pjs-H2-fGN" name="animate" keyPath="isSubscribeInProgress" id="J1C-9o-dpS"/>
+                    </connections>
+                </progressIndicator>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="wJC-Rh-imW">
+                    <rect key="frame" x="18" y="166" width="356" height="21"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Subscribe to our Newsletter" id="dUo-Be-jvW">
+                        <font key="font" metaFont="systemBold" size="17"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" id="gQk-Yq-xg7">
+                    <rect key="frame" x="32" y="67" width="330" height="22"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Your email address" drawsBackground="YES" id="tgP-Yw-O55">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <outlet property="delegate" destination="pjs-H2-fGN" id="qQj-dh-5oX"/>
+                    </connections>
+                </textField>
+                <button verticalHuggingPriority="750" id="ksb-HL-1hn">
+                    <rect key="frame" x="141" y="20" width="110" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Subscribe" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mR1-ee-ecR">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="subscribeButtonPressed:" target="-1" id="kXk-WD-pfc"/>
+                        <binding destination="pjs-H2-fGN" name="enabled" keyPath="isSubscribeAvailable" id="cGt-3m-W83"/>
+                    </connections>
+                </button>
+                <button id="qmJ-3i-62W">
+                    <rect key="frame" x="250" y="27" width="104" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="Don't ask again" bezelStyle="regularSquare" imagePosition="left" controlSize="small" state="on" inset="2" id="c09-3d-coy">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <binding destination="-3" name="hidden" keyPath="delegate.isNewsletterDontAskHidden" id="7YV-zi-OQE"/>
+                        <binding destination="868" name="value" keyPath="values.IsUserSubscribedToNewsletter" id="ciS-sb-0aO"/>
+                    </connections>
+                </button>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="47d-iZ-3Ps">
+                    <rect key="frame" x="30" y="97" width="334" height="61"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Subscribe today to receive free tips for your Mac, iPad, and iPhone, as well as the latest news on our tutorials." id="mlE-Rd-J6p">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <point key="canvasLocation" x="469" y="300.5"/>
+        </customView>
+        <viewController id="fo6-Pl-o29" userLabel="Review View Controller" customClass="ReviewViewController">
+            <connections>
+                <outlet property="view" destination="znu-MH-g4x" id="C9R-2S-P8n"/>
+            </connections>
+        </viewController>
+        <popover behavior="semitransient" id="aih-ok-Hbk" userLabel="Review popover">
+            <connections>
+                <outlet property="contentViewController" destination="fo6-Pl-o29" id="wnf-0S-r2K"/>
+            </connections>
+        </popover>
+    </objects>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSApplicationIcon" width="128" height="128"/>
+        <image name="NSGoLeftTemplate" width="9" height="12"/>
+        <image name="NSGoRightTemplate" width="9" height="12"/>
+        <image name="NSPreferencesGeneral" width="32" height="32"/>
+        <image name="fs_enter_fullscreen" width="29" height="27"/>
+        <image name="fs_exit_fullscreen" width="29" height="27"/>
+        <image name="fs_pause" width="33" height="27"/>
+        <image name="fs_play" width="34" height="27"/>
+        <image name="newsletter" width="17" height="15"/>
+        <image name="review" width="19" height="19"/>
+        <image name="shoppingcart" width="17" height="16"/>
+    </resources>
+</document>

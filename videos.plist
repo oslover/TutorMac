@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>VideosList</key>
+	<array>
+		<dict>
+			<key>Title</key>
+			<string> Which watchOS do I have</string>
+			<key>BundlePath</key>
+			<string>Contents/Resources/50-which.mov</string>
+			<key>Description</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string> Getting Around the Apple Watch</string>
+			<key>BundlePath</key>
+			<string>Contents/Resources/100-around-watch.mov</string>
+			<key>Description</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string> Getting Around the Watch App</string>
+			<key>BundlePath</key>
+			<string>Contents/Resources/110-around-watch-app.mov</string>
+			<key>Description</key>
+			<string></string>
+		</dict>
+	</array>
+</dict>
+</plist>
