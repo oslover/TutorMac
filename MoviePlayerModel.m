@@ -34,12 +34,13 @@ static NSString* AVPlayerRateChangedContext = @"AVPlayerRateChangedContext";
 {
     [self addObserver:self forKeyPath:@"avPlayer.rate" options:NSKeyValueObservingOptionInitial|NSKeyValueObservingOptionNew context:AVPlayerRateChangedContext];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(movieDidEndHandler) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+    timer = [[NSTimer scheduledTimerWithTimeInterval:MovieDataRefreshTimeout target:self selector:@selector(timerFired:) userInfo:nil repeats:YES] retain];
+
 }
 
 - (id) init
 {
 	if( self = [super init] ) {
-		timer = [[NSTimer scheduledTimerWithTimeInterval:MovieDataRefreshTimeout target:self selector:@selector(timerFired:) userInfo:nil repeats:YES] retain];
 		return self;
 	} else {
 		return nil;
@@ -109,6 +110,10 @@ static NSString* AVPlayerRateChangedContext = @"AVPlayerRateChangedContext";
 
 - (void) refreshMovieData
 {
+    if (self.avPlayer == nil || self.avPlayer.status == AVPlayerStatusUnknown) {
+        return;
+    }
+    
 	[self willChangeValueForKey:@"currentTime"];
 	currentTime = [self NSTimeIntervalFromCMTime:[self.avPlayer currentTime]];
 	[self didChangeValueForKey:@"currentTime"];
@@ -117,7 +122,9 @@ static NSString* AVPlayerRateChangedContext = @"AVPlayerRateChangedContext";
 	isPlaying = [self.avPlayer rate];
 	[self didChangeValueForKey:@"isPlaying"];
 	
-	self.totalTime = [self NSTimeIntervalFromCMTime:[self.avPlayer.currentItem duration]];
+    if (self.avPlayer.status == AVPlayerStatusReadyToPlay) {
+        self.totalTime = [self NSTimeIntervalFromCMTime:[self.avPlayer.currentItem.asset duration]];
+    }
 }
 
 #pragma mark timer methods
